@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'models/destinasi_alam.dart'; // Memanggil data dari file model.
+import '../models/destinasi_alam.dart'; // Memanggil data dari file model.
 
 // Halaman daftar destinasi.
 class ListDestinasiPage extends StatelessWidget {

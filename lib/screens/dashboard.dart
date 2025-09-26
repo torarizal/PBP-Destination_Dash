@@ -19,7 +19,6 @@ class _DashboardPageState extends State<DashboardPage> {
   String _userName = 'atmint gantenk';
 
   // State untuk melacak item dropdown yang dipilih (opsional, bisa digunakan jika ingin menampilkan pilihan yang sudah dipilih)
-  String? _selectedDestination;
 
   String getGreeting() {
     final hour = DateTime.now().hour;
@@ -158,11 +157,13 @@ class _DashboardPageState extends State<DashboardPage> {
                   if (result == 'alam') {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => ListDestinasiPage()),
+                      MaterialPageRoute(
+                          builder: (context) => ListDestinasiPage()),
                     );
                   }
                   setState(() {
-                    _selectedDestination = result;
+                    _activePage =
+                        'List Destinasi'; // Hapus status aktif dari menu lain
                   });
                 },
                 offset: const Offset(0, 40), // Posisi dropdown di bawah tombol
